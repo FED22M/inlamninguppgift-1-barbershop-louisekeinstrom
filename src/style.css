@@ -2,12 +2,17 @@
     border: solid black 1px;
 }
 
+@font-face {
+    font-family: ;
+    src: url();
+}
+
 body {
     background-color: white;
-
 }
 
 h1 {
+    
     font-family: ;
     color: white;
 }
@@ -21,8 +26,7 @@ h3 {
 }
 
 p {
-    font-family: ;
-    color: white;
+    color: #fff;
 }
 
 .header {
@@ -37,8 +41,9 @@ p {
     color: black;
 }
 
-.aboutus > .calendar {
+.calendar {
     color: black;
+    background-color: #dcd2bb;
 }
 
 .review {
