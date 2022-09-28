@@ -2,12 +2,27 @@
     border: solid black 1px;
 }
 
-h1, h2, h3 {
+body {
+    background-color: white;
+
+}
+
+h1 {
     font-family: ;
+    color: white;
+}
+
+h2 {
+    color: #BF925B;
+}
+
+h3 {
+    color: white;
 }
 
 p {
     font-family: ;
+    color: white;
 }
 
 .header {
@@ -16,6 +31,14 @@ p {
 
 .services {
     background-color: #dcd2bb;
+}
+
+.aboutus > h3, p {
+    color: black;
+}
+
+.aboutus > .calendar {
+    color: black;
 }
 
 .review {
