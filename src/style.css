@@ -11,6 +11,28 @@ body {
     background-color: white;
 }
 
+.menu {
+    background-color: #141B25;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #BF925B;
+    text-decoration: none;
+}
+
+.decoration { /*dessa gör texten transparent*/
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white; 
+
+}
+
 h1 {
     
     font-family: ;
