@@ -41,7 +41,7 @@ p {
     color: black;
 }
 
-.calendar {
+.calendar { /*varför blir denna inte över hela span????*/
     color: black;
     background-color: #dcd2bb;
 }
