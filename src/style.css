@@ -10,6 +10,18 @@ p {
     font-family: ;
 }
 
+.header {
+    background-color: #141B25;
+}
+
+.services {
+    background-color: #dcd2bb;
+}
+
 .review {
-    background-color: #235232222;
+    background-color: #dcd2bb;
+}
+
+footer {
+    background-color: #141B25;
 }
