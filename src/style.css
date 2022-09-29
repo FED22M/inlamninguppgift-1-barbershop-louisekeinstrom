@@ -4,15 +4,22 @@
 
 @font-face { /*gör detta sen*/
     font-family: ;
-    src: url();
+    src: url(https://fonts.google.com/);
 }
 
 body {
     background-color: white;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
 .menu {
     background-color: #141B25;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
 
 }
 
@@ -35,7 +42,7 @@ a:hover {
 
 h1 {
     
-    font-family: ;
+    font-family: _Barlow Semi Condensed_;
     color: white;
 }
 
@@ -53,14 +60,34 @@ p {
 
 .header {
     background-color: #141B25;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .services {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+
     background-color: #dcd2bb;
 }
 
 .aboutus > h3, p {
     color: black;
+}
+
+.aboutus {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    display: flex;
+
 }
 
 .calendar { /*varför blir denna inte över hela span????*/
@@ -69,6 +96,18 @@ p {
 }
 
 .review {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.review > span {
+    display: flex;
+    flex-direction: row;
     background-color: #dcd2bb;
 }
 
