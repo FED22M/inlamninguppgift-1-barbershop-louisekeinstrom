@@ -1,26 +1,37 @@
 * {
     border: solid black 1px;
-}
+} 
 
-@font-face { /*gör detta sen*/
-    font-family: ;
-    src: url(https://fonts.google.com/);
+@media screen (min-width 800px) {
+    .container {
+        margin: 1em 2em;
+    }
 }
 
 body {
     background-color: white;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu {
-    background-color: #141B25;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
 
+/* -------------------------------------------- Common rules -------------------------------------------*/
+h1 {
+    color: white;
+}
+
+h2 {
+    color: #BF925B;
+}
+
+h3 {
+    color: white;
 }
 
 a {
@@ -33,76 +44,103 @@ a:hover {
     text-decoration: none;
 }
 
+
+/*---------------------------------------------- Sections ------------------------------------------------*/
+.menu {
+    display: flex;
+    background-color: #141B25;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    margin: 0px;
+    padding: 0px;
+    color: transparent;
+}
+
+.menu > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    list-style: none;
+
+}
+
+.header {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #141B25;
+    flex-wrap: wrap;
+    flex-shrink: inherit;
+}
+
+.header > img {
+    float: inline-start;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+}
+
 .decoration { /*dessa gör texten transparent*/
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white; 
-
-}
-
-h1 {
-    
-    font-family: _Barlow Semi Condensed_;
-    color: white;
-}
-
-h2 {
-    color: #BF925B;
-}
-
-h3 {
-    color: white;
-}
-
-p {
-    color: #fff;
-}
-
-.header {
-    background-color: #141B25;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 3;
 }
 
 .services {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 4;
     display: flex;
-
+    width: 100%;
     background-color: #dcd2bb;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: row;
 }
 
-.aboutus > h3, p {
-    color: black;
+.services > div {
+    color: #BF925B;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.serv_img {
+    display: inline-block;
+    width: auto;
+    height: 300px;
+
 }
 
 .aboutus {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 4;
-    grid-row-end: 5;
-
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 50px;
+    flex-direction: row;
 }
 
 .calendar { /*varför blir denna inte över hela span????*/
-    color: black;
+    display: flex;
+    justify-content: center;
     background-color: #dcd2bb;
+    border-image-repeat: round;
+    width: 200px;
 }
 
 .review {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 5;
-    grid-row-end: 6;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .review > span {
@@ -113,4 +151,13 @@ p {
 
 footer {
     background-color: #141B25;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+footer > ul {
+    color: #fff;
 }
