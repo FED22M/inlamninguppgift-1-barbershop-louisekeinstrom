@@ -228,6 +228,8 @@ label {
   flex-wrap: wrap;
   min-width: 200px;
   background-color: #a67941;
+  position: static;
+  order: 1;
 }
 
 .box1 > div {
@@ -253,6 +255,8 @@ label {
   justify-content: space-around;
   min-width: 200px;
   background-color: #bf925b;
+  position: static;
+  order: 1;
 }
 
 .box2 > div {
@@ -278,6 +282,8 @@ label {
   justify-content: space-around;
   min-width: 200px;
   background-color: #a67941;
+  position: static;
+  order: 1;
 }
 
 .box3 > div {
@@ -303,6 +309,8 @@ label {
   justify-content: space-around;
   min-width: 200px;
   background-color: #bf925b;
+  position: static;
+  order: 1;
 }
 
 .box4 > div {
@@ -325,6 +333,7 @@ label {
   object-fit: scale-down;
   border-radius: 70%;
   height: 350px;
+  position: static;
 }
 
 .box2 > div > img {
@@ -332,6 +341,7 @@ label {
   object-fit: scale-down;
   border-radius: 70%;
   height: 350px;
+  position: static;
 }
 
 .box3 > div > img {
@@ -339,32 +349,37 @@ label {
   object-fit: scale-down;
   border-radius: 70%;
   height: 350px;
+  position: static;
 }
 
 .box4 > div > img {
   width: 350px;
   object-fit: scale-down;
-  border-radius: 70%;
+  border-radius: 50%;
   height: 350px;
 }
 
 /*3rd section*/
 
 .aboutus {
-  display: grid;
-  /*grid-column: 1 / 2;
-  grid-row: 3 / 4;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-left: 200px;
-  margin-right: 200px;
-  padding: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  flex-wrap: wrap;
 }
 
 .aboutus > div {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+}
+
+.aboutus > div > .bild {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .aboutus > div > div {
@@ -374,13 +389,18 @@ label {
   padding: 40px;
 }
 
+.aboutus > div > div > h2 {
+  display: flex;
+  align-items: flex-end;
+}
+
 .aboutus > div > div > h3 {
   color: black;
 }
 
 .service_text {
   color: black;
-  width: 50%;
+  width: 45%;
 }
 
 .calendar {
@@ -507,16 +527,16 @@ footer > div > ul:nth-child(1) {
   list-style: none;
 }
 
-footer > div > ul:nth-child(2) {
-  list-style: inside;
+.list {
+  list-style: none;
 }
 
-footer > div > ul:nth-child(3) {
-  list-style: inside;
+.list::before {
+  content: "> ";
 }
 
-footer > div > ul:nth-child(4) {
-  list-style: inside url();
+.list1 {
+  list-style: none;
 }
 
 footer > div > ul > li > a {
