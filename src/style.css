@@ -421,95 +421,92 @@ label {
 }
 
 .calendar > div > h3 {
-  font-size: 60%;
+  font-size: 20px;
 }
 
 .calendar > div > p {
   /*Kolla detta igen--------------------------------------------------------------------------------*/
-  font-size: 40%;
+  font-size: 12px;
 }
 /*4th section*/
 
 .review {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
   background-color: #dcd2bb;
-  width: 100%;
-}
-
-.review > h2 {
-  display: flex;
-  align-items: flex-end;
-}
-
-.review > h3 {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  justify-self: center;
 }
 
 .review > div {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 400px;
+  justify-content: center;
+  padding: 20px;
 }
 
-.review > div > div {
+.boxes > div {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  background-color: #fff;
-  height: 400px;
+  height: 200px;
+  justify-content: space-around;
+  color: #bf925b;
 }
 
-.review > div > div > div {
+.review > h2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.review > h3 {
+  display: flex;
+  color: black;
+  justify-content: center;
+  text-align: center;
+}
+
+.boxes {
+  display: flex;
+  width: 30%;
+  height: 40%;
+  flex-direction: row;
+  background-color: #fff;
+  justify-content: space-evenly;
+  color: #bf925b;
+}
+
+.boxes > div > img {
+  display: flex;
+  width: 80%;
+  height: 60%;
+  object-fit: scale-down;
+  border-radius: 40% 40%;
+  padding: 20px;
+}
+
+.reviewtext > p {
+  display: flex;
+  text-align: start;
+  color: black;
+  padding-top: 10px;
+}
+
+.reviewtext > h2 {
+  display: flex;
+  text-align: start;
+}
+
+.reviewtext {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  padding: 10px;
-  width: 30%;
-  height: 30%;
-  height: 400px;
-}
-
-.review > div > div > div > img {
-  display: flex;
-  margin-top: 10px;
-  height: 200px;
-  border-radius: 50%;
-  height: 400px;
-}
-
-.review > div > div > div > p {
-  display: flex;
-  flex: 2;
-  color: #141b25;
-}
-
-.review > div > div > div > h2 {
-  color: #141b25;
-  display: flex;
-  flex: 3;
-  justify-content: center;
-  align-items: center;
-}
-
-.review > div > div > div > h3 {
-  display: flex;
-  flex: 4;
-  color: #bf925b;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin: 0;
 }
 
 .star {
   color: #bf925b;
+  margin-bottom: 0px;
 }
 /* 5th section*/
 
