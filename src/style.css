@@ -5,8 +5,8 @@
 
 body {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 2fr 2fr 2fr 1fr;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -30,15 +30,15 @@ h3 {
 }
 
 a {
-  color: white;
+  /*color: white;*/
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   font-family: "Poppins", sans-serif;
 }
 
 a:hover {
-  color: #bf925b;
-  text-decoration: none;
+  /*color: #bf925b;
+  text-decoration: none;*/
   transform: scale(1.1);
   font-family: "Poppins", sans-serif;
 }
@@ -52,18 +52,16 @@ ul {
   font-family: "Poppins", sans-serif;
 }
 
-/*---------------------------------------------- Sections ------------------------------------------------*/
-/* 1st section*/
-
-/*alles*/
-.header {
-  width: 100%;
+label {
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
+/*---------------------------------------------- Sections ------------------------------------------------*/
+/* 1st section*/
 /*---------- MENUBAR ----------*/
 .menu {
   display: grid;
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   grid-row: 1/ 6;
   width: 100%;
   justify-self: center;
@@ -105,11 +103,19 @@ ul {
   width: 100%;
 }
 
+.menu > div > ul > li > a {
+  color: #fff;
+}
+
+.menu > div > ul > li > a:hover {
+  color: #bf925b;
+}
+
 /*----------HEADER (img + text)----------*/
 
 .header {
   display: grid;
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   grid-row: 1 / 3;
   height: 100%;
   width: 100%;
@@ -221,7 +227,7 @@ ul {
 .services {
   display: grid;
   grid-row: 2 / 3;
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   width: 100%;
   background-color: #dcd2bb;
   direction: row;
@@ -293,7 +299,7 @@ ul {
 
 .aboutus {
   display: grid;
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   grid-row: 3 / 4;
   width: 100%;
   margin-left: 200px;
@@ -349,10 +355,11 @@ ul {
 
 .review {
   display: grid;
-  grid-column: 1 / 4;
+  grid-column: 1 / 2;
   grid-row: 4 / 5;
   width: 100%;
   background-color: #dcd2bb;
+  width: 100%;
 }
 
 .review > div {
@@ -409,38 +416,52 @@ ul {
 }
 /* 5th section*/
 
-/*
-
 footer {
-  background-color: #141b25;
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  background-color: black;
   width: 100%;
+}
+
+footer > div {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 
-footer > ul > li {
-  color: #fff;
-}
-
-footer > ul > label {
+footer > div > ul {
   color: #dcd2bb;
 }
 
-footer > ul:nth-child(1) {
+footer > div > ul > label {
+  color: #fff;
+}
+
+footer > div > ul:nth-child(1) {
   list-style: none;
 }
 
-footer > ul:nth-child(2) {
+footer > div > ul:nth-child(2) {
   list-style: inside;
 }
 
-footer > ul:nth-child(3) {
+footer > div > ul:nth-child(3) {
   list-style: inside;
 }
 
-footer > ul:nth-child(4) {
+footer > div > ul:nth-child(4) {
   list-style: inside url();
 }
-*/
+
+footer > div > ul > li > a {
+  color: #dcd2bb;
+}
+
+footer > div > ul > li > a:hover {
+  color: #bf925b;
+}
