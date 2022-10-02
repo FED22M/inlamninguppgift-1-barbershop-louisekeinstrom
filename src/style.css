@@ -431,47 +431,59 @@ label {
 /*4th section*/
 
 .review {
-  display: grid;
-  /*grid-column: 1 / 2;
-  grid-row: 4 / 5;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background-color: #dcd2bb;
   width: 100%;
 }
 
+.review > h2 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.review > h3 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+}
+
 .review > div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  height: 400px;
 }
 
 .review > div > div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  background-color: #fff;
+  height: 400px;
 }
 
 .review > div > div > div {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
+  flex-direction: column;
   margin: 10px;
   padding: 10px;
   width: 30%;
   height: 30%;
+  height: 400px;
 }
 
 .review > div > div > div > img {
   display: flex;
-  flex: 1;
-  order: -1;
   margin-top: 10px;
   height: 200px;
   border-radius: 50%;
+  height: 400px;
 }
 
 .review > div > div > div > p {
@@ -494,6 +506,10 @@ label {
   color: #bf925b;
   justify-content: center;
   align-items: center;
+}
+
+.star {
+  color: #bf925b;
 }
 /* 5th section*/
 
