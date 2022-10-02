@@ -105,7 +105,7 @@ label {
   color: #fff;
 }
 
-.menu > div > ul > li > a:hover {
+.menu > ul > li > a:hover {
   color: #bf925b;
 }
 
@@ -141,6 +141,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-bottom: 100px;
 }
 
 .headertext > div {
@@ -149,18 +150,23 @@ label {
   align-items: flex-start;
   justify-content: space-between;
   padding-right: 100px;
+  margin-bottom: 300px;
+  height: 400px;
 }
 
 .headertext > div > div {
   display: flex;
   justify-content: flex-end;
-  width: 250px;
+  width: 300px;
   padding-right: 200px;
   margin: 0px;
 }
 
 .headertext > div > div > p {
   width: 300px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  border-left: #bf925b solid 2px;
 }
 
 .decoration {
@@ -174,11 +180,12 @@ label {
 .button {
   display: block;
   order: 0;
-  width: 50px;
+  width: 180px;
+  height: 40px;
   margin-right: 80px;
   padding: 10px;
   color: #bf925b;
-  border: #bf925b solid 2px;
+  border: #bf925b solid 3px;
   text-align: center;
   font-size: small;
   transition: all 0.2s ease-in-out;
@@ -206,69 +213,141 @@ label {
   background-color: #dcd2bb;
 }
 
-.services > .box1,
-.box2,
-.box3,
-.box4 > div {
+.services > div {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: #bf925b;
-  padding: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.services > .box1 {
+.box1 {
   display: flex;
-  flex-direction: column;
   width: 25%;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 200px;
+  background-color: #a67941;
 }
 
-.services > .box2 {
+.box1 > div {
   display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.box1 > div > p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+}
+
+.box2 {
+  display: flex;
+  width: 25%;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 200px;
   background-color: #bf925b;
-  width: 25%;
-  justify-content: center;
-  align-items: center;
 }
 
-.services > .box3 {
+.box2 > div {
   display: flex;
-  flex-direction: column;
-  width: 25%;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.services > .box4 {
+.box2 > div > p {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+}
+
+.box3 {
+  display: flex;
+  width: 25%;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 200px;
+  background-color: #a67941;
+}
+
+.box3 > div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.box3 > div > p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+}
+
+.box4 {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 200px;
   background-color: #bf925b;
-  width: 25%;
-  justify-content: center;
-  align-items: center;
 }
 
-.services > .box1,
-.box2,
-.box3,
-.box4 > p {
-  justify-self: center;
-  align-self: center;
-}
-
-.serv_img {
+.box4 > div {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-  order: -33;
+  flex-wrap: wrap;
+  padding: 20px;
 }
+
+.box4 > div > p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+}
+
+.box1 > div > img {
+  width: 350px;
+  object-fit: scale-down;
+  border-radius: 70%;
+  height: 350px;
+}
+
+.box2 > div > img {
+  width: 350px;
+  object-fit: scale-down;
+  border-radius: 70%;
+  height: 350px;
+}
+
+.box3 > div > img {
+  width: 350px;
+  object-fit: scale-down;
+  border-radius: 70%;
+  height: 350px;
+}
+
+.box4 > div > img {
+  width: 350px;
+  object-fit: scale-down;
+  border-radius: 70%;
+  height: 350px;
+}
+
 /*3rd section*/
 
 .aboutus {
