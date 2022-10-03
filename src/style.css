@@ -5,12 +5,27 @@ body {
 }
 
 .container {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3fr 2fr 2fr 2fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1, 5fr 2fr 2fr 2fr 1fr;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+@media all and (max-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1, 5fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+      "header"
+      "aboutus"
+      "services"
+      "review"
+      "footer";
+  }
 }
 
 /* -------------------------------------------- Common rules -------------------------------------------*/
@@ -71,6 +86,7 @@ label {
   top: 0px;
   height: 100px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5));
+  z-index: 2;
 }
 
 .menu > h1 {
@@ -146,6 +162,13 @@ label {
   padding-bottom: 100px;
 }
 
+@media all and (max-width: 500px) {
+  .headertext {
+    justify-self: center;
+    width: 450px;
+  }
+}
+
 .headertext > div {
   display: flex;
   flex-direction: column;
@@ -159,7 +182,6 @@ label {
 .headertext > div > div {
   display: flex;
   justify-content: flex-end;
-  width: 300px;
   padding-right: 200px;
   margin: 0px;
 }
@@ -169,6 +191,15 @@ label {
   padding-left: 20px;
   padding-bottom: 15px;
   border-left: #bf925b solid 2px;
+}
+
+.headertext > div > div > h3 {
+  margin: 0px;
+}
+
+.headertext > div > div > h2 {
+  margin-bottom: 0px;
+  margin-top: 80px;
 }
 
 .decoration {
@@ -215,6 +246,13 @@ label {
   background-color: #dcd2bb;
 }
 
+@media all and (max-width: 500px) {
+  .services > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .services > div {
   display: flex;
   flex-direction: row;
@@ -223,15 +261,59 @@ label {
   width: 100%;
 }
 
+@media all and (max-width: 500px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 550px;
+  }
+}
+
 .box1 {
   display: flex;
   width: 25%;
   flex-direction: column;
   flex-wrap: wrap;
-  min-width: 200px;
   background-color: #a67941;
   position: static;
   order: 1;
+}
+
+@media all and (max-width: 500px) {
+  .box1 > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .box2 > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .box3 > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .box4 > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
 }
 
 .box1 > div {
@@ -249,13 +331,32 @@ label {
   padding: 10px;
 }
 
+.box1 > div > h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.box2 > div > h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.box3 > div > h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.box4 > div > h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .box2 {
   display: flex;
   width: 25%;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-width: 200px;
   background-color: #bf925b;
   position: static;
   order: 1;
@@ -282,7 +383,6 @@ label {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-width: 200px;
   background-color: #a67941;
   position: static;
   order: 1;
@@ -309,7 +409,6 @@ label {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-width: 200px;
   background-color: #bf925b;
   position: static;
   order: 1;
@@ -334,45 +433,53 @@ label {
   width: 330px;
   border-radius: 50%;
   height: 330px;
-  position: static;
+  position: relative;
+  bottom: 120px;
+  z-index: 1;
 }
 
 .box2 > div > img {
   width: 330px;
   border-radius: 50%;
   height: 330px;
-  position: static;
+  position: relative;
+  bottom: 120px;
+  z-index: 1;
 }
 
 .box3 > div > img {
   width: 330px;
   border-radius: 50%;
   height: 330px;
-  position: static;
+  position: relative;
+  bottom: 120px;
+  z-index: 1;
 }
 
 .box4 > div > img {
   width: 330px;
   border-radius: 50%;
   height: 330px;
+  position: relative;
+  bottom: 120px;
+  z-index: 1;
 }
 
 /*3rd section*/
 
 .aboutus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-columns: 1 / 2;
+  grid-rows: 3 / 4;
   width: 100%;
-
-  flex-wrap: wrap;
   background-color: #fff;
 }
 
 .aboutus > div {
   display: flex;
   flex-direction: row;
-  width: 70%;
+  justify-self: center;
+  width: 80%;
 }
 
 .aboutus > div > .bild {
@@ -385,16 +492,19 @@ label {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 40px;
+  padding: 100px;
 }
 
 .aboutus > div > div > h2 {
   display: flex;
   align-items: flex-end;
+  margin: 0px;
 }
 
 .aboutus > div > div > h3 {
   color: black;
+  margin: 0px;
+  align-items: center;
 }
 
 .service_text {
@@ -404,51 +514,63 @@ label {
 
 .calendar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #dcd2bb;
   border-image-repeat: round;
-  width: 200px;
+  width: 300px;
+  padding-left: 20px;
+  background-color: #bf925b;
 }
 
 .calendar > div {
   display: flex;
   flex-direction: column;
   margin: 5px;
-  height: 50px;
+  height: 60px;
   width: 100px;
+  padding: 10px;
 }
 
 .calendar > div > h3 {
-  font-size: 20px;
+  font-size: 25px;
+  margin: 5px;
 }
 
 .calendar > div > p {
-  /*Kolla detta igen--------------------------------------------------------------------------------*/
   font-size: 12px;
+  margin: 0px;
+  width: 150px;
+}
+
+.calendar > img {
+  height: 30px;
+  -webkit-filter: invert(100%);
 }
 /*4th section*/
 
 .review {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-columns: 1 / 2;
+  grid-rows: 4 / 5;
+  justify-self: center;
+  align-self: center;
   background-color: #dcd2bb;
 }
 
 .review > div {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 20px;
   background-color: #dcd2bb;
+  height: 550px;
 }
 
 .boxes > div {
   display: flex;
   flex-direction: row;
-  height: 200px;
+
   justify-content: space-around;
   color: #fff;
   padding: 5px;
@@ -459,6 +581,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin-top: 80px;
 }
 
 .review > h3 {
@@ -466,44 +589,68 @@ label {
   color: black;
   justify-content: center;
   text-align: center;
+  margin-top: 0px;
 }
 
 .boxes {
   display: flex;
   width: 30%;
   height: 40%;
-  flex-direction: row;
+  flex-direction: column;
   background-color: #fff;
   justify-content: space-evenly;
   color: #bf925b;
 }
 
-.boxes > div > img {
+.boxes > div {
   display: flex;
-  width: 80%;
-  height: 60%;
-  object-fit: scale-down;
-  border-radius: 40% 40%;
+  flex-direction: column;
+  height: 200px;
   padding: 20px;
 }
 
-.reviewtext > p {
+.reviewtext > img {
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  position: static;
+}
+
+.boxes > div > p {
   display: flex;
   text-align: start;
   color: black;
   height: 100px;
 }
 
-.reviewtext > h2 {
+.reviewtext > div > h2 {
   display: flex;
   text-align: start;
+  color: black;
+  margin: 0px;
+}
+
+.reviewtext > div > h3 {
+  display: flex;
+  text-align: start;
+  color: #bf925b;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.reviewtext > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
 }
 
 .reviewtext {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   margin: 0;
+  height: 200px;
 }
 
 .star {
@@ -514,10 +661,11 @@ label {
 
 footer {
   display: grid;
-  /*grid-column: 1 / 2;
-  grid-row: 5 / 6;*/
+  grid-row: 5 / 6;
+  grid-column: 1 / 2;
   background-color: black;
   width: 100%;
+  height: 300px;
 }
 
 footer > div {
@@ -525,13 +673,13 @@ footer > div {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 50px;
   margin-left: 120px;
   margin-right: 120px;
 }
 
 footer > div > ul {
   color: #dcd2bb;
+  margin: 30px;
 }
 
 footer > div > ul > label {
@@ -539,10 +687,6 @@ footer > div > ul > label {
 }
 
 footer > div > ul:nth-child(1) {
-  list-style: none;
-}
-
-.list {
   list-style: none;
 }
 
@@ -554,65 +698,19 @@ footer > div > ul:nth-child(1) {
   list-style: none;
 }
 
+.list1 > li > div > img {
+  margin: 3px;
+  height: 30px;
+  width: 30px;
+  background-color: #bf925b;
+  border-radius: 50%;
+  padding: 2px;
+}
+
 footer > div > ul > li > a {
   color: #dcd2bb;
 }
 
 footer > div > ul > li > a:hover {
   color: #bf925b;
-}
-
-@media all and (max-width: 500px) {
-  .services {
-  }
-
-  .services > div {
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .box1 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-width: 200px;
-    background-color: #a67941;
-    position: static;
-    order: 1;
-  }
-
-  .box2 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-width: 200px;
-    background-color: #a67941;
-    position: static;
-    order: 1;
-  }
-
-  .box3 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-width: 200px;
-    background-color: #a67941;
-    position: static;
-    order: 1;
-  }
-
-  .box4 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-width: 200px;
-    background-color: #a67941;
-    position: static;
-    order: 1;
-  }
 }
