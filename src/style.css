@@ -635,7 +635,7 @@ footer > div > ul > label {
   color: #fff;
 }
 
-footer > div > ul:nth-child(1) {
+footer > div > ul {
   list-style: none;
 }
 
